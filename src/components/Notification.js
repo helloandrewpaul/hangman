@@ -13,6 +13,7 @@ export default Notification;
 
 const Notice = styled.div`
   border: 2px solid #000;
+  background-color: #fff;
   padding: 15px 20px;
   position: absolute;
   bottom: ${({ showNotification }) => (showNotification ? '50px' : '-100%')};
