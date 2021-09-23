@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Figure = ({ wrongLetters }) => {
   const errors = wrongLetters.length;
+
   return (
     <>
-      <svg height='250' width='200' className='figure-container'>
+      <DeadMan height='250' width='200'>
         {/* <!-- Rod --> */}
         <line x1='60' y1='20' x2='140' y2='20' />
         <line x1='140' y1='20' x2='140' y2='50' />
@@ -20,9 +22,16 @@ const Figure = ({ wrongLetters }) => {
         {/* <!-- Legs --> */}
         {errors > 4 && <line x1='140' y1='150' x2='120' y2='180' />}
         {errors > 5 && <line x1='140' y1='150' x2='160' y2='180' />}
-      </svg>
+      </DeadMan>
     </>
   );
 };
 
 export default Figure;
+
+const DeadMan = styled.svg`
+  stroke-linecap: round;
+  stroke-width: 4px;
+  stroke: #000;
+  fill: transparent;
+`;
