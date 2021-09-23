@@ -3,8 +3,8 @@
 }
 
 body {
-  background-color: #34495e;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ h1 {
 
 .figure-container {
   fill: transparent;
-  stroke: #fff;
+  stroke: #000;
   stroke-width: 4px;
   stroke-linecap: round;
 }
@@ -63,7 +63,7 @@ h1 {
 }
 
 .letter {
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid #000;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -87,8 +87,8 @@ h1 {
 }
 
 .popup {
-  background: #2980b9;
-  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #000;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
@@ -96,8 +96,8 @@ h1 {
 
 .popup button {
   cursor: pointer;
-  background-color: #fff;
-  color: #2980b9;
+  background-color: #000;
+  color: #fff;
   border: 0;
   margin-top: 20px;
   padding: 12px 20px;
@@ -113,8 +113,7 @@ h1 {
 }
 
 .notification-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px 10px 0 0;
+  border: 2px solid #000;
   padding: 15px 20px;
   position: absolute;
   bottom: -50px;
