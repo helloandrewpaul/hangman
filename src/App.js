@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Figure from './components/Figure';
-import WrongLetters from './components/WrongLetters';
-import Word from './components/Word';
-import Notification from './components/Notification';
-import Popup from './components/Popup';
+import {
+  Figure,
+  Header,
+  Notification,
+  Popup,
+  Word,
+  WrongLetters,
+} from './components';
 import { showNotification as show } from './helpers/helpers';
-
 import './App.css';
+
 const words = require('an-array-of-english-words');
-// const words = ['application', 'programming', 'interface', 'wizard'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
   useEffect(() => {
     const handleKeydown = (event) => {
       const { key, keyCode } = event;
+
       if (playable && keyCode >= 65 && keyCode <= 90) {
         const letter = key.toLowerCase();
-
         if (selectedWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
             setCorrectLetters((currentLetters) => [...currentLetters, letter]);
@@ -55,8 +56,8 @@ function App() {
       <Header />
       <div className='game-container'>
         <Figure wrongLetters={wrongLetters} />
-        <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+        <WrongLetters wrongLetters={wrongLetters} />
       </div>
       <Popup
         correctLetters={correctLetters}

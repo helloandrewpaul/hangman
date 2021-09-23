@@ -24,6 +24,7 @@ h1 {
   margin: auto;
   height: 350px;
   width: 450px;
+
 }
 
 .figure-container {
@@ -116,7 +117,7 @@ h1 {
   border: 2px solid #000;
   padding: 15px 20px;
   position: absolute;
-  bottom: -50px;
+  bottom: -55px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -125,5 +126,5 @@ h1 {
 }
 
 .notification-container.show {
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
