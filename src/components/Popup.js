@@ -1,15 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Popup = () => {
-    return (
-        <div className='popup-container' id='popup-container'>
-            <div className='popup'>
-                <h2 id='final-message'></h2>
-                <h3 id='finale-message-reveal-word'></h3>
-                <button id='play-button'>Play Again</button>
-            </div>
+const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable }) => {
+  let finalMessage = '';
+    let finalMessageRevealWord = '';
+    let playable = true
+
+  return (
+    <div className='popup-container'>
+      <div className='popup'>
+        <h2>{finalMessage}</h2>
+        <h3>{finalMessageRevealWord}</h3>
+        <button i>Play Again</button>
       </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Popup
+export default Popup;

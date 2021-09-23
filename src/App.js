@@ -8,8 +8,8 @@ import Popup from './components/Popup';
 import { showNotification as show } from './helpers/helpers';
 
 import './App.css';
-
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = require('an-array-of-english-words')
+// const words = ['application', 'programming', 'interface', 'wizard'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable}/>
       <Notification showNotification={showNotification} />
     </>
   );
