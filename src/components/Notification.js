@@ -1,11 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Notification = ({ showNotification }) => {
   return (
-    <div className={`notification-container ${showNotification ? 'show' : ''}`}>
+    <Notice showNotification={showNotification}>
       <p>You have already entered this letter</p>
-    </div>
+    </Notice>
   );
 };
 
 export default Notification;
+
+const Notice = styled.div`
+  border: 2px solid #000;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: ${({ showNotification }) => (showNotification ? '50px' : '-100%')};
+  opacity: ${({ showNotification }) => (showNotification ? '1' : '0')};
+  transition: all 1s ease-in-out;
+`;
