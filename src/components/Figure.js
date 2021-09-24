@@ -5,7 +5,7 @@ const Figure = ({ wrongLetters }) => {
   const errors = wrongLetters.length;
 
   return (
-    <>
+    <><DeadWrap>
       <DeadMan height='250' width='200'>
         {/* <!-- Rod --> */}
         <line x1='60' y1='20' x2='140' y2='20' />
@@ -23,11 +23,15 @@ const Figure = ({ wrongLetters }) => {
         {errors > 4 && <line x1='140' y1='150' x2='120' y2='180' />}
         {errors > 5 && <line x1='140' y1='150' x2='160' y2='180' />}
       </DeadMan>
+      </DeadWrap>
     </>
   );
 };
 
 export default Figure;
+const DeadWrap = styled.div`
+margin: 0 auto;
+width:250px;`
 
 const DeadMan = styled.svg`
   stroke-linecap: round;

@@ -30,8 +30,8 @@ const Letter = styled.span`
 
 const WordDiv = styled.div`
   display: flex;
-  /* position: absolute;
-  bottom: 10px; */
-  /* left: 50%;
-  transform: translateX(-50%); */
+  justify-content: center;
+  margin:0 auto;
+  width:100%;
+
 `;
