@@ -22,7 +22,7 @@ export default WrongLetters;
 
 const Dead = styled.span`
   font-size: 24px;
-  align-items: center;
+
 `;
 
 const GraveYard = styled.p`
@@ -31,11 +31,8 @@ const GraveYard = styled.p`
 
 const GraveYardWrap = styled.div`
 width:100%;
-  position: absolute;
-bottom:16px;
-  /* display: flex; */
-  /* flex-direction: column;
-  text-align: right; */
+margin:30px auto;
+
 `;
 
 
