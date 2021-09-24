@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Word = ({ selectedWord, correctLetters }) => {
   return (
-    <WordDiv >
+    <WordDiv>
       {selectedWord.split('').map((letter, index) => {
         return (
           <Letter key={index}>
@@ -25,7 +25,8 @@ const Letter = styled.span`
   justify-content: center;
   margin: 0 3px;
   height: 50px;
-  width: 20px;`
+  width: 20px;
+`;
 
 const WordDiv = styled.div`
   display: flex;
@@ -33,6 +34,4 @@ const WordDiv = styled.div`
   bottom: 10px; */
   /* left: 50%;
   transform: translateX(-50%); */
-  `
-
-
+`;

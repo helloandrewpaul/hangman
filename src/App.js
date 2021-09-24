@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import GlobalStyles from './GlobalStyles';
 import {
   Figure,
   Header,
@@ -8,7 +9,6 @@ import {
   WrongLetters,
 } from './components';
 import { showNotification as show } from './helpers/helpers';
-import './App.css';
 
 const words = require('an-array-of-english-words');
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -57,6 +57,7 @@ function App() {
   };
   return (
     <>
+      <GlobalStyles/>
       <Header />
         <Figure wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
