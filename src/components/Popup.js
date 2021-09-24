@@ -33,13 +33,29 @@ const Popup = ({
       <PopupText>
         <h2>{finalMessage}</h2>
         <h3>{finalMessageRevealWord}</h3>
-        <button onClick={playAgain}>Play Again</button>
+        <Btn onClick={playAgain}>Play Again</Btn>
       </PopupText>
     </PopupWrap>
   );
 };
 
 export default Popup;
+
+const Btn = styled.button`
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  :hover {
+    border: 2px solid #000;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+`;
 
 const PopupWrap = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
