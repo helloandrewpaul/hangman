@@ -58,11 +58,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className='game-container'>
         <Figure wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
         <WrongLetters wrongLetters={wrongLetters} />
-      </div>
       <Popup
         correctLetters={correctLetters}
         wrongLetters={wrongLetters}

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const WrongLetters = ({ wrongLetters }) => {
   return (
     <GraveYardWrap>
-      <div>
+      
         {wrongLetters.length > 0 && <GraveYard>Graveyard:</GraveYard>}
         {wrongLetters
           .map((letter, index) => <Dead key={index}>{letter}</Dead>)
@@ -13,15 +13,16 @@ const WrongLetters = ({ wrongLetters }) => {
               previous === null ? [current] : [previous, ', ', current],
             null
           )}
-      </div>
+     
     </GraveYardWrap>
   );
 };
 
 export default WrongLetters;
 
-const Dead = styled.div`
+const Dead = styled.span`
   font-size: 24px;
+  align-items: center;
 `;
 
 const GraveYard = styled.p`
@@ -31,10 +32,10 @@ const GraveYard = styled.p`
 const GraveYardWrap = styled.div`
 width:100%;
   position: absolute;
-bottom:0;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
+bottom:16px;
+  /* display: flex; */
+  /* flex-direction: column;
+  text-align: right; */
 `;
 
 
