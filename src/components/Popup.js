@@ -45,12 +45,11 @@ const Btn = styled.button`
   cursor: pointer;
   background-color: #000;
   color: #fff;
-  border: 0;
+  border: 2px solid #000;
   margin-top: 20px;
   padding: 12px 20px;
   font-size: 16px;
   :hover {
-    border: 2px solid #000;
     color: #000;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
@@ -77,4 +76,7 @@ const PopupText = styled.div`
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
+
+
+
 `;
