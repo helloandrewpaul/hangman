@@ -18,6 +18,9 @@ function App() {
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
+  const [open,setOpen]=useState(false)
+
+  
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -50,6 +53,7 @@ function App() {
     setWrongLetters([]);
     const random = Math.floor(Math.random() * words.length);
     selectedWord = words[random];
+    setOpen(false)
   };
   return (
     <>
@@ -65,6 +69,8 @@ function App() {
         selectedWord={selectedWord}
         setPlayable={setPlayable}
         playAgain={playAgain}
+        open={open}
+        setOpen={setOpen}
       />
       <Notification showNotification={showNotification} />
     </>
