@@ -29,6 +29,7 @@ const Figure = ({ wrongLetters }) => {
 };
 
 export default Figure;
+         
 const DeadWrap = styled.div`
 margin: 0 auto;
 width:250px;`
