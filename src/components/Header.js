@@ -18,10 +18,12 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
+
 const Head = styled.h1`
   display: inline-flex;
   justify-content: center;
 `;
+
 const Tag = styled.p`
   display: inline-flex;
   justify-content: center;
