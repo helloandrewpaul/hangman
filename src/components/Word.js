@@ -33,5 +33,4 @@ const WordDiv = styled.div`
   justify-content: center;
   margin:0 auto;
   width:100%;
-
 `;
